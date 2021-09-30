@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DATABASE: "parking_slot"
+      POSTGRES_USER: "parking_slot"
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_ROOT_PASSWORD: "admin"
+    restart: unless-stopped
+  database_test:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DATABASE: "parking_slot_test"
+      POSTGRES_USER: "parking_slot_test"
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_ROOT_PASSWORD: "admin"
+    restart: unless-stopped

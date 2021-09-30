@@ -1,0 +1,8 @@
+{
+	"knex": {
+		"database": "parking_slot",
+		"user": "parking_slot",
+		"host": "localhost",
+		"port": "5432"
+	}
+}
